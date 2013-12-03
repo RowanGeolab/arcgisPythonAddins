@@ -4,7 +4,7 @@ Python-based Add-in for ArcGIS Desktop. Upon clicking a location within the Unit
 You do not need to download any Census GIS data for this tool to work. It will request the geometry and attribute data for you! Works with nearly any projection in ArcMap. 
 
 ##Install
-Request a [Census API key](http://www.census.gov/developers/tos/key_request.html). Open the `query_census.py` file and paste your API key into the `CensusAPIkey` variable. 
+Request a [Census API key](http://www.census.gov/developers/tos/key_request.html). Open the `Install/query_census.py` file and paste your API key into the `CensusAPIkey` variable. 
 
 Double-click `makeaddin.py` to create the `.esriaddin` file. Double-click the `.esriaddin` file to install the add-in in ArcMap. 
 
