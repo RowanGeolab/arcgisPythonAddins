@@ -16,3 +16,6 @@ Images/*     : all UI images for the project (icons, images for buttons,
 Install/*    : The Python project used for the implementation of the
                AddIn. The specific python script to be used as the root
                module is specified in config.xml.
+
+
+*NOTE: DO NOT REMOVE THIS FILE OR makeaddin.py WILL NO LONGER WORK.

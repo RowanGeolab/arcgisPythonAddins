@@ -5,12 +5,13 @@
 ## Python Add-in Tools:
 ## http://resources.arcgis.com/en/help/main/10.2/index.html#/Tool/014p00000027000000/
 
-## change this key to your Census API key.
-## request an API key here: http://www.census.gov/developers/tos/key_request.html
-censusAPIkey = ''
-
 import arcpy, pythonaddins
-import urllib2, json
+import urllib2, json, os
+import ConfigParser
+
+config = ConfigParser.ConfigParser()
+config.read(os.path.join(os.path.dirname(__file__), r'census_config.txt'))
+censusAPIkey = config.get('api.census.gov', 'key')
 
 class QueryCensus2010(object):
     def __init__(self):
@@ -77,6 +78,8 @@ class QueryCensus2010(object):
             ### TODO: dynamically add fields to store the API information (self.Census['tables'])
             ###       so that everything can be in an ArcGIS Feature Class element
             censuslyr = arcpy.mapping.ListLayers(df, "census_geometry")[0]
+            symbollyr = arcpy.mapping.Layer( os.path.join(os.path.dirname(__file__), r'census_geometry.lyr') )
+            arcpy.mapping.UpdateLayer(df, censuslyr, symbollyr, True)
         # if already exists, remove features from the Census Geometry layer
         else:
             censuslyr = arcpy.mapping.ListLayers(df, "census_geometry")[0]
