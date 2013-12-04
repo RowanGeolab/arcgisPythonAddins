@@ -1,0 +1,13 @@
+<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><Name>New Jersey Web Services</Name><AddInID>{5289001f-5f4e-4079-a243-37df0da28c06}</AddInID><Description>Provides easy access to NJ-based Web Services</Description><Version>0.1</Version><Image /><Author>John Reiser</Author><Company>Rowan GeoLab</Company><Date>12/03/2013</Date><Targets><Target name="Desktop" version="10.2" /></Targets><AddIn language="PYTHON" library="NJServices_addin.py" namespace="NJServices_addin"><ArcMap>
+    <Commands>
+        <Tool caption="Open NJ-GeoWeb" category="New Jersey Web Services" class="openGeoweb" id="openGeoweb.tool" image="" message="" tip="Opens NJ-GeoWeb at a user-defined bounding box."><Help heading="" /></Tool>
+        <Tool caption="Download 2012 Imagery" category="New Jersey Web Services" class="dl2012" id="dl2012.tool" image="" message="" tip="Downloads and extracts the 2012 Imagery for NJ"><Help heading="" /></Tool>
+        </Commands>
+    <Extensions>
+        </Extensions>
+    <Toolbars>
+        <Toolbar caption="NJ Services" category="New Jersey Web Services" id="NJServices_addin.toolbar" showInitially="true"><Items><Tool refID="openGeoweb.tool" /><Tool refID="dl2012.tool" /></Items></Toolbar>
+        </Toolbars>
+    <Menus>
+        </Menus>
+    </ArcMap></AddIn></ESRI.Configuration>
