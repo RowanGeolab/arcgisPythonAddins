@@ -10,3 +10,6 @@ An interactive tool for launching Bing Maps or Google Maps from within ArcGIS De
 
 ## Query Census APIs
 An interactive tool for bringing Census Geometries (Blocks or Tracts) into ArcMap, along with basic demographic data. 
+
+## NJ Services
+A set of tools for working with NJ-based web services from within ArcMap.
