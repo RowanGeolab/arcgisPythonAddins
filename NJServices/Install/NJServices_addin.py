@@ -92,9 +92,8 @@ class dl2012(object):
             mxd = arcpy.mapping.MapDocument("CURRENT")
             df = arcpy.mapping.ListDataFrames(mxd)[0]
             result = arcpy.MakeRasterLayer_management(os.path.join(dldir, f["properties"]["TILE_NO"]+".sid"), f["properties"]["TILE_NO"]+".sid")
-            lyr = result.getOutput(0)
-            arcpy.mapping.AddLayer(df, lyr, 'AUTO_ARRANGE')
         pythonaddins.MessageBox("Download complete.", "Done!", 0)
+        arcpy.RefreshActiveView()
 
 class openGeoweb(object):
     """Implementation for openGeoweb.tool (Tool)"""
